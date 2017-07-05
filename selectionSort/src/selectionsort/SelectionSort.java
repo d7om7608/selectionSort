@@ -5,16 +5,17 @@
  */
 package selectionsort;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  *
  * @author d7om7
  */
 public class SelectionSort {
 
-    /**
-     * @param args the command line arguments
-     */
-         public static int[] doSelectionSort(int[] arr){
+    
+    public static int[] doSelectionSort(int[] arr){
          
         for (int i = 0; i < arr.length - 1; i++)
         {
@@ -30,11 +31,25 @@ public class SelectionSort {
         return arr;
     }
      
+    public static int[] doSort(int[] arr){
+        Arrays.sort(arr);
+        return arr;
+    }
+    
     public static void main(String a[]){
          
-        int[] arr1 = {10,34,2,56,7,67,88,42};
+        int[] arr1 = {13,34,2,56,2,14,27,67,88,42};
         int[] arr2 = doSelectionSort(arr1);
+        int[] arr3 = doSort(arr1);
+        
         for(int i:arr2){
+            System.out.print(i);
+            System.out.print(", ");
+        }
+        
+        System.out.println("\n================");
+        
+        for(int i:arr3){
             System.out.print(i);
             System.out.print(", ");
         }
